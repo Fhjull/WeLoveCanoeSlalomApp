@@ -17,6 +17,11 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Мы любим гребной слалом',
       theme: ThemeData(
+        textTheme: TextTheme(
+          bodyText2: TextStyle(
+            fontSize: 18,
+          ),
+        ),
         primarySwatch: Colors.blue,
       ),
       home: const MyHomePage(title: 'Мы любим гребной слалом'),
