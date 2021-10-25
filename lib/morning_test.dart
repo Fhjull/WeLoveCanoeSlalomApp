@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 int? nightSleepHours;
 /*
@@ -425,40 +426,52 @@ class _SleepQualityState extends State<SleepQuality> {
               ),
             ),
           ),
-          Row(
-            children: [
-              Radio<String>(
-                value: 'good',
-                groupValue: qualityOfSleep,
-                visualDensity: const VisualDensity(horizontal: 4, vertical: 0),
-                onChanged: (value) {
-                  setState(() {
-                    qualityOfSleep = value;
-                  });
-                },
-              ),
-              const Flexible(
-                child: Text('Отлично спал'),
-              ),
-            ],
+          IconButton(
+            iconSize: 50,
+            color: Colors.yellow,
+            onPressed: () {
+              setState(() {});
+            },
+            icon: FaIcon(
+              FontAwesomeIcons.angry,
+              // size: 50,
+              // color: Colors.yellow,
+            ),
           ),
-          Row(
-            children: [
-              Radio<String>(
-                value: 'bad',
-                groupValue: qualityOfSleep,
-                visualDensity: const VisualDensity(horizontal: 4, vertical: 0),
-                onChanged: (value) {
-                  setState(() {
-                    qualityOfSleep = value;
-                  });
-                },
-              ),
-              const Flexible(
-                child: Text('Ворочался всю ночь, не мог уснуть'),
-              ),
-            ],
-          ),
+          // Row(
+          //   children: [
+          //     Radio<String>(
+          //       value: 'good',
+          //       groupValue: qualityOfSleep,
+          //       visualDensity: const VisualDensity(horizontal: 4, vertical: 0),
+          //       onChanged: (value) {
+          //         setState(() {
+          //           qualityOfSleep = value;
+          //         });
+          //       },
+          //     ),
+          //     const Flexible(
+          //       child: Text('Отлично спал'),
+          //     ),
+          //   ],
+          // ),
+          // Row(
+          //   children: [
+          //     Radio<String>(
+          //       value: 'bad',
+          //       groupValue: qualityOfSleep,
+          //       visualDensity: const VisualDensity(horizontal: 4, vertical: 0),
+          //       onChanged: (value) {
+          //         setState(() {
+          //           qualityOfSleep = value;
+          //         });
+          //       },
+          //     ),
+          //     const Flexible(
+          //       child: Text('Ворочался всю ночь, не мог уснуть'),
+          //     ),
+          //   ],
+          // ),
         ],
       ),
     );
